@@ -1,24 +1,25 @@
-# Chatbot-using-Python
-Build a chatbot using deep learning techniques. The chatbot will be trained on the dataset which contains categories (intents), pattern and responses. We use a special recurrent neural network (LSTM) to classify which category the user’s message belongs to and then we will give a random response from the list of responses.
+In this project, I developed a chatbot using deep learning techniques to provide intelligent, human-like conversational capabilities. The goal was to design a system that could understand user queries in natural language, process them, and generate coherent, contextually appropriate responses.
 
-:white_check_mark: ## Getting Started 
+Components and Workflow
+Data Collection and Preprocessing
 
-- [x] Download all the files
+"I started by collecting conversational datasets, such as [name dataset, e.g., Cornell Movie Dialogues or custom-built data].
+The data was cleaned and tokenized, including removing stop words, handling punctuation, and converting text to lower case.
+I also used word embeddings like Word2Vec or GloVe to convert text into numerical representations, capturing semantic meaning."
+Model Architecture
 
-- [x] Open Command Prompt
+"The chatbot was based on a Sequence-to-Sequence (Seq2Seq) model using Recurrent Neural Networks (RNNs), specifically LSTMs or GRUs, to handle sequential data effectively.
+For better context understanding, I implemented an attention mechanism, allowing the model to focus on relevant parts of the input sentence while generating the response."
+Training
 
-- [x] Get the control to the folder where your files are present
+"The model was trained using a dataset of dialogues, with input being user queries and output being expected responses.
+I used a loss function like cross-entropy and optimized it using algorithms such as Adam optimizer.
+Training involved multiple epochs with techniques like dropout and batch normalization to prevent overfitting."
+Evaluation and Improvement
 
-- [x] Make sure your system has the following modules installed - 
-tensorflow, keras, nltk, pickle. If not, then install the modules using the command - {pip install module_name}. If your system already has the module, it will show "Requirement already satisfied".
+"I evaluated the chatbot’s performance using BLEU scores to assess response quality and coherence.
+To improve conversational depth, I fine-tuned the model on domain-specific datasets (e.g., customer support or e-commerce queries)."
+Deployment
 
-- [x] Now we have to train and create the model. Hence execute the "train_chatbot.py" file using the following command - {python train_chatbot.py}. If the training is successful it will show model created. 
-
-- [x] To open the GUI window and start conversation with the chatbot execute the "chatgui.py" file using the following command - {python chatgui.py}. It will open the GUI  window. 
-
-- [x] Write your text in the section on the right to the send button and click on "Send". Enjoy the responses !  
-
-
-!!! ERROR GUIDE !!!
-
-While executing the file "train_chatbot.py" if you get some error like - "ImportError: cannot import name 'tf_utils'", uninstall keras using the command - {pip uninstall keras}, then reinstall keras using the command - {pip install keras==2.2.0}. Try executing the file, i hope it works properly ! 
+"The trained model was deployed using frameworks like Flask or FastAPI, integrated with a web or messaging interface to interact with users.
+I used cloud services like AWS or Google Cloud for scalability and responsiveness.
